@@ -1,0 +1,13 @@
+.header{
+    height: 70px;
+    background-color: #ABC0B8;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: top 0.6s;
+    z-index: 2;
+}
+
+.header-hidden{
+    top: -80px;
+}

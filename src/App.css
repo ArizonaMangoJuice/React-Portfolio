@@ -1,38 +1,58 @@
-.App {
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* block component */
+.block-info{
+  position: relative;
+  max-width: 1000px;
+  background-color: #607998;
+  color: white;
+  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  margin: 0 auto 0 auto;
+}
+
+.first-margin{
+  margin-top: 90px;
+}
+
+.small-padding-top-bottom{
+  padding: 5px 0;
+}
+
+.block-info section {
+  width: 50%;
+}
+
+.block-info h1 {
+  width: 50%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.big-quote::before, .big-quote::after{
+  content: '"';
+  font-size: 65px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.block-info-button{
+  border: 1px solid white;
+  background: none;
+  font-size: 24px;
   color: white;
+  margin-top: 25px;
+  padding: 10px 25px;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.block-info-button:hover{
+  background: white;
+  color: #607998;
+  border: 1px solid #607998;
 }
