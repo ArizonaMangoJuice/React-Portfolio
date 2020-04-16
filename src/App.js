@@ -15,9 +15,10 @@ function App() {
 
     if(height <= currentScrollPos){
       setPassed(true)
-    } else {
-      setPassed(false)
-    }
+    } 
+    // else {
+    //   setPassed(false)
+    // }
   }
 
   useEffect(() => {
@@ -29,7 +30,6 @@ function App() {
 
   const measuredRef = useCallback(node => {
     if(node !== null) setHeight(node.getBoundingClientRect().y)
-    // console.log(node.getBoundingClientRect())
   }, [])
 
   return (
@@ -42,16 +42,14 @@ function App() {
         <BlockInfo />
       </div>
       <div ref={measuredRef}  className='block-container very-soft-orange'>
-
       <CSSTransition
         in={passed}
         appear={passed}
         timeout={1000}
         classNames='alert'
-        // unmountOnExit
       >
-          {/* <h1 className='test' ref={measuredRef}>{passed ? 'passed' : ''}</h1> */}
-         { passed ? <BlockInfo /> : <div className='blue-card'></div>}
+        { passed ? <BlockInfo /> : <div className='blue-card'></div> }
+
       </CSSTransition>
       </div>
 

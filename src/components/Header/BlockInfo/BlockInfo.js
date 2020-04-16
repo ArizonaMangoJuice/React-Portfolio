@@ -1,10 +1,8 @@
 import React from 'react'
 
-
-
 export default function BlockInfo(props){
     let test = React.createRef()
-    // console.log('test', test)
+    if(props && props.test) console.log('test', props.test()) 
     return (
     <div className='block-info ' ref={test}>
         <div className='theme-bar'></div>
