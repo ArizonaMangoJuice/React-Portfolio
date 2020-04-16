@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function BlockInfo(props){
     return (
-    <div className='block-info first-margin'>
+    <div className='block-info '>
         <div className='theme-bar'></div>
         <section>
           <h4 className='small-padding-top-bottom'>Isael Lizama</h4>

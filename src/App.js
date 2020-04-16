@@ -8,11 +8,22 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <BlockInfo />
-      <BlockInfo />
-      <BlockInfo />
-      <BlockInfo />
-      <BlockInfo />
+      <div className='block-container dark-blue-background first-margin'>
+        <BlockInfo />
+      </div>
+      <div className='block-container lime-green'>
+        <BlockInfo />
+      </div>
+      <div className='block-container very-soft-orange'>
+        <BlockInfo />
+      </div>
+      <div className='block-container soft-orange'>
+        <BlockInfo />
+      </div>
+      <div className='block-container moderate-pink'>
+        <BlockInfo />
+      </div>
+
 
     </div>
   );
