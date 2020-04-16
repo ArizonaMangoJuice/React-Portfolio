@@ -21,9 +21,9 @@ const BlockInfo = React.forwardRef((props, ref) => {
               <h4 data-aos='fade-left' className='small-padding-top-bottom'>Isael Lizama</h4>
               <h2 data-aos='fade-right'className='small-padding-top-bottom'>Full Stack Developer</h2>
               <p data-aos='fade-down' className='small-padding-top-bottom'>Anim fugiat dolor amet non ex aliquip. Enim excepteur cupidatat id cillum culpa commodo amet. Duis commodo cupidatat deserunt voluptate aliquip reprehenderit tempor esse ullamco reprehenderit ex. Occaecat qui laboris pariatur dolore laboris amet culpa aliqua adipisicing. Eu ex elit dolor reprehenderit nisi.</p>
-              <button className='block-info-button'>View Project</button>
+              <button data-aos='zoom-out-down' button className='block-info-button'>View Project</button>
             </section>
-            <h1 className='big-quote'>
+            <h1 data-aos='zoom-out-left' className='big-quote'>
                Mollit consequat esse ea cillum.
             </h1>
         </div>
