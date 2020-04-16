@@ -1,10 +1,17 @@
-import React from 'react'
+import React, {useCallback, useEffect} from 'react'
 
 export default function BlockInfo(props){
-    let test = React.createRef()
-    if(props && props.test) console.log('test', props.test()) 
+    
+    const ref = node => {
+      if(node !== null) console.log(node.getBoundingClientRect())
+    }
+    
+    useEffect(() => {
+      console.log(document)
+    },[])
+
     return (
-    <div className='block-info ' ref={test}>
+    <div className='block-info' >
         <div className='theme-bar'></div>
         <section>
           <h4 className='small-padding-top-bottom'>Isael Lizama</h4>

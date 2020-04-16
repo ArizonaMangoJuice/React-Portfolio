@@ -16,9 +16,9 @@ function App() {
     if(height <= currentScrollPos){
       setPassed(true)
     } 
-    // else {
-    //   setPassed(false)
-    // }
+    else {
+      setPassed(false)
+    }
   }
 
   useEffect(() => {
