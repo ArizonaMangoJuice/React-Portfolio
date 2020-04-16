@@ -10,9 +10,23 @@ const mapStateToProps = state => ({
 const BlockInfo = React.forwardRef((props, ref) => {
   if(props.forwardRef) console.log(props, ref)
   
+  let image;
+
   useEffect(() => {
     Aos.init({duration: 1500})
   })
+
+  if(props.img && props.me) image = (
+    <div data-aos='zoom-out-left' className='block-image-container'>
+      <img src='https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2Fme.jpg?alt=media' />
+    </div>)
+
+  if(props.img && !props.me) image = (
+    <div data-aos='zoom-out-left' className='block-image-container'>
+      <img src='https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2Fme.jpg?alt=media' />
+    </div>
+  )
+
 
   return (
         <div className='block-info ' ref={props.forwardRef}>
@@ -21,11 +35,11 @@ const BlockInfo = React.forwardRef((props, ref) => {
               <h4 data-aos='fade-left' className='small-padding-top-bottom'>Isael Lizama</h4>
               <h2 data-aos='fade-right'className='small-padding-top-bottom'>Full Stack Developer</h2>
               <p data-aos='fade-down' className='small-padding-top-bottom'>Anim fugiat dolor amet non ex aliquip. Enim excepteur cupidatat id cillum culpa commodo amet. Duis commodo cupidatat deserunt voluptate aliquip reprehenderit tempor esse ullamco reprehenderit ex. Occaecat qui laboris pariatur dolore laboris amet culpa aliqua adipisicing. Eu ex elit dolor reprehenderit nisi.</p>
-              <button data-aos='zoom-out-down' button className='block-info-button'>View Project</button>
+              <button data-aos='zoom-out-down' className='block-info-button'>View Project</button>
             </section>
-            <h1 data-aos='zoom-out-left' className='big-quote'>
+            {image ? image : <h1 data-aos='zoom-out-left' className='big-quote'>
                Mollit consequat esse ea cillum.
-            </h1>
+            </h1>}
         </div>
         )
 })

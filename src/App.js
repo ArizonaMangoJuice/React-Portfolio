@@ -26,7 +26,7 @@ function App(props) {
     <div className="App">
       <Header />
       <div data-aos='fade-in' className='block-container  first-margin'>
-        <BlockInfo img-/>
+        <BlockInfo img={true} me={true} src={'https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2Fme.jpg?alt=media'}/>
       </div>
       <div data-aos='fade-up' className='block-container lime-green'>
         <BlockInfo />

@@ -70,7 +70,7 @@ body{
 }
 
 .block-info-button{
-  border: 1px solid white;
+  border: none;
   background: none;
   font-size: 24px;
   color: white;
@@ -82,40 +82,21 @@ body{
 .block-info-button:hover{
   background: white;
   color: #607998;
-  border: 1px solid #607998;
+  /* border: 1px solid #607998; */
 }
 
 .block-container{
   padding: 50px;
 }
 
-/* fading css animations  */
-
-.alert{
-  transition: 1s ;
+.block-image-container{
+  width: 50%;
+  text-align: center;
 }
 
-.alert-enter {
-  opacity: 0;
-  /* height: 200px; */
-  /* background-color: red; */
-}
-.alert-enter-active {
-  opacity: 1;
-  transition: opacity 1000ms;
-}
-.alert-exit {
-  /* background-color: blue; */
-  opacity: 1;
-}
-.alert-exit-active {
-  opacity: 0;
-  transition: opacity 1000ms;
-}
-
-.blue-card{
-  padding: 0 50px;
-  height: 450px;
-  max-width: 1000px;
-    /* background-color: #607998;  */
+.block-image-container img{
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
 }
