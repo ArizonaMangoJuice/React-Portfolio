@@ -11,6 +11,7 @@ function App() {
 
   let handleScroll = () => {
     const currentScrollPos = window.pageYOffset
+    console.log(currentScrollPos, height)
 
     if(height <= currentScrollPos){
       setPassed(true)
@@ -27,7 +28,8 @@ function App() {
   })
 
   const measuredRef = useCallback(node => {
-    if(node !== null) setHeight(node.getBoundingClientRect().height)
+    if(node !== null) setHeight(node.getBoundingClientRect().y)
+    // console.log(node.getBoundingClientRect())
   }, [])
 
   return (
@@ -39,17 +41,19 @@ function App() {
       <div className='block-container lime-green'>
         <BlockInfo />
       </div>
+      <div ref={measuredRef}  className='block-container very-soft-orange'>
+
       <CSSTransition
         in={passed}
-        timeout={300}
+        appear={passed}
+        timeout={1000}
         classNames='alert'
-        unmountOnExit
+        // unmountOnExit
       >
-        <div ref={measuredRef}  className='block-container very-soft-orange'>
           {/* <h1 className='test' ref={measuredRef}>{passed ? 'passed' : ''}</h1> */}
-          {passed ?  <BlockInfo /> : 'hello'}
-        </div>
+         { passed ? <BlockInfo /> : <div className='blue-card'></div>}
       </CSSTransition>
+      </div>
 
       <div className='block-container soft-orange'>
         <BlockInfo />

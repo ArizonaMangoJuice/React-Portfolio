@@ -4,7 +4,7 @@
 }
 
 body{
-  background-color: black;
+  /* background-color: black; */
 }
 
 /* theme colors */
@@ -43,6 +43,7 @@ body{
   align-items: center;
   min-height: 350px;
   margin: 0 auto 0 auto;
+  transition: 1s;
 }
 
 .first-margin{
@@ -90,40 +91,31 @@ body{
 
 /* fading css animations  */
 
+.alert{
+  transition: 1s ;
+}
+
 .alert-enter {
   opacity: 0;
-  /* height: 0%; */
-  height: 350px;
-  transform: scale(0.9);
-  background-color: #f5e5c3;
-  color: white;
+  /* height: 200px; */
+  /* background-color: red; */
 }
 .alert-enter-active {
-  height: 100%;
-  background-color: red;
-  opacity: .5;
-  transform: translateX(0);
-  transition: opacity 3000ms, transform 3000ms;
-  /* background-color: black; */
-  color: white;
+  opacity: 1;
+  transition: opacity 1000ms;
 }
 .alert-exit {
+  /* background-color: blue; */
   opacity: 1;
 }
 .alert-exit-active {
   opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 3000ms, transform 3000ms;
-  
+  transition: opacity 1000ms;
 }
 
-.alert-exit-done{
-  background-color: black;
-  color: white;
-}
-
-
-.test{
-  background-color: black;
-  color: white;
+.blue-card{
+  padding: 0 50px;
+  height: 450px;
+  max-width: 1000px;
+    /* background-color: #607998;  */
 }
