@@ -1,8 +1,12 @@
 import React from 'react'
 
+
+
 export default function BlockInfo(props){
+    let test = React.createRef()
+    // console.log('test', test)
     return (
-    <div className='block-info '>
+    <div className='block-info ' ref={test}>
         <div className='theme-bar'></div>
         <section>
           <h4 className='small-padding-top-bottom'>Isael Lizama</h4>

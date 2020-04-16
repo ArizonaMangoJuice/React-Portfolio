@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header/Header';
 import BlockInfo from './components/Header/BlockInfo/BlockInfo';
+import { CSSTransition } from 'react-transition-group'
 
 function App() {
+  let [height, setHeight] = useState(0)
+  let [passed, setPassed] = useState(false)
+
+  let handleScroll = () => {
+    const currentScrollPos = window.pageYOffset
+
+    if(height <= currentScrollPos){
+      setPassed(true)
+    } else {
+      setPassed(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  })
+
+  const measuredRef = useCallback(node => {
+    if(node !== null) setHeight(node.getBoundingClientRect().height)
+  }, [])
+
   return (
     <div className="App">
       <Header />
@@ -14,9 +39,18 @@ function App() {
       <div className='block-container lime-green'>
         <BlockInfo />
       </div>
-      <div className='block-container very-soft-orange'>
-        <BlockInfo />
-      </div>
+      <CSSTransition
+        in={passed}
+        timeout={300}
+        classNames='alert'
+        unmountOnExit
+      >
+        <div ref={measuredRef}  className='block-container very-soft-orange'>
+          {/* <h1 className='test' ref={measuredRef}>{passed ? 'passed' : ''}</h1> */}
+          {passed ?  <BlockInfo /> : 'hello'}
+        </div>
+      </CSSTransition>
+
       <div className='block-container soft-orange'>
         <BlockInfo />
       </div>
