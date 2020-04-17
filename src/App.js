@@ -40,8 +40,8 @@ function App(props) {
         </div>
         
       </div>
-      <div data-aos='fade-in' className='block-container  first-margin'>
-        <BlockInfo img={true} me={true} src={'https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2Fme.jpg?alt=media'}
+      <div data-aos='fade-in' className='block-container '>
+        <BlockInfo img={true} me={true} imgSrc={'https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2Fme.jpg?alt=media'}
           title='Isaels Lizama'
           desc='Full Stack Developer'
           paragraph={`Being a web developer taught me how to think critically about what im going to do and how i'm going to do it.
@@ -56,24 +56,27 @@ function App(props) {
         />
       </div>
       <div data-aos='fade-up' className='block-container lime-green' >
-        <BlockInfo 
+        <BlockInfo img={true} imgSrc={'https://arizonamangojuice.github.io/portfolio/img/lolImprover.png'}
           title='Lol Improver'
           desc='Improve your gaming skills'
           paragraph='Lol Improver is an app that lets you take notes on champions. Allowing you to see which champions you struggle against. Lol Improver lets you find player statistics. This app user React, MongoDB, Express, and mocha, chai, enzyme and, jest. You can find the repo here.'
+          link={'https://focused-nightingale-b297e9.netlify.com/'}
           />
       </div>
       <div data-aos='fade-right'  className='block-container very-soft-orange'>
-        <BlockInfo 
-          title=''
-          desc=''
-          paragraph=''
+        <BlockInfo img={true} imgSrc={'https://arizonamangojuice.github.io/portfolio/img/bonus-kid-banner.png'}
+          title='Bonus Kid'
+          desc='Treat Your Children'
+          paragraph={`Bonus Kid  is an app that lets parents give incentives to their kids. The parent can add tasks and rewards to each child they have. The child can send a response saying they have completed the task or buy a reward from the store the parent has made. This app uses React, MongoDB, Express, and mocha, chai, enzyme and, jest. You can find the repo here.`}
+          link={'https://focused-nightingale-b297e9.netlify.com/'}
         />
       </div>
       <div data-aos='fade-down' className='block-container soft-orange'>
-        <BlockInfo 
-          title=''
-          desc=''
-          paragraph=''
+        <BlockInfo img={true} imgSrc={' https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2Fisaelsblog.jpg?alt=media'}
+          title='Isaels Blog'
+          desc='Writing Helps Think'
+          paragraph='Isaels blog is a blog web page that let me posts my thoughts and things that I have been working on. People are able to see my latest blogs. I can also login to create a blog and be able to upload images.'
+          link={'https://isaelblogs.netlify.app/'}
         />
       </div>
       <div data-aos='fade-right'  className='block-container moderate-pink'>

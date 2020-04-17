@@ -15,7 +15,7 @@ export default function Header (props) {
         
     let handleScroll = () => {
         const currentScrollPos = window.pageYOffset
-        const visible = 500 > currentScrollPos
+        const visible = 800 > currentScrollPos
         setVisible(visible)
         setScrollPosition(currentScrollPos)
     }
@@ -31,9 +31,9 @@ export default function Header (props) {
     return (
         <nav 
             ref={measuredRef}
-            className={`header ${!visible ? 'header-hidden' : ''}`}
+            className={`header  moderate-pink ${visible ? 'header-hidden' : ''}`}
             >
-            <h1>HELLO</h1>
+            <h1>AMJ</h1>
         </nav>
     )
 }

@@ -17,13 +17,13 @@ const BlockInfo = React.forwardRef((props, ref) => {
   })
 
   if(props.img && props.me) image = (
-    <div data-aos='zoom-out-left' className='block-image-container'>
-      <img src='https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2Fme.jpg?alt=media' />
+    <div data-aos='zoom-out-left' className='me'>
+      <img className='' src={props.imgSrc} />
     </div>)
 
   if(props.img && !props.me) image = (
     <div data-aos='zoom-out-left' className='block-image-container'>
-      <img src='https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2Fme.jpg?alt=media' />
+      <img src={props.imgSrc} />
     </div>
   )
 
