@@ -7,6 +7,7 @@
 
 body{
   /* background-color: black; */
+  width: 100%;
 }
 
 /* theme colors */
@@ -35,7 +36,7 @@ body{
 /* block component */
 .block-info{
   position: relative;
-  max-width: 1000px;
+  max-width: 900px;
   background-color: #607998;
   color: white;
   padding: 50px;
@@ -90,6 +91,7 @@ body{
 
 .block-container{
   padding: 50px;
+  /* box-sizing: border-box; */
 }
 
 .block-image-container{
@@ -126,4 +128,26 @@ body{
   margin-top: 20px;
   /* padding-left: 25px; */
   font-size: 38px;
+}
+
+.social-media{
+  margin-top: 45px;
+  display: flex;
+  flex-direction: row;
+}
+
+.social-media a{
+  color: white;
+  padding: 25px 15px;
+  font-size: 60px;
+  display: block;
+}
+
+.social-media a:hover{
+  color: #ce4a70;
+  background-color: white;
+  padding: 25px 15px;
+  font-size: 60px;
+  border-radius: 5px;
+  display: block;
 }

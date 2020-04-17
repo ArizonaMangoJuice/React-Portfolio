@@ -32,13 +32,13 @@ const BlockInfo = React.forwardRef((props, ref) => {
         <div className='block-info ' ref={props.forwardRef}>
             <div className='theme-bar'></div>
             <section>
-              <h4 data-aos='fade-left' className='small-padding-top-bottom'>Isael Lizama</h4>
-              <h2 data-aos='fade-right'className='small-padding-top-bottom'>Full Stack Developer</h2>
-              <p data-aos='fade-down' className='small-padding-top-bottom'>Anim fugiat dolor amet non ex aliquip. Enim excepteur cupidatat id cillum culpa commodo amet. Duis commodo cupidatat deserunt voluptate aliquip reprehenderit tempor esse ullamco reprehenderit ex. Occaecat qui laboris pariatur dolore laboris amet culpa aliqua adipisicing. Eu ex elit dolor reprehenderit nisi.</p>
+              <h4 data-aos='fade-left' className='small-padding-top-bottom'>{props.title}</h4>
+              <h2 data-aos='fade-right'className='small-padding-top-bottom'>{props.desc}</h2>
+              <p data-aos='fade-down' className='small-padding-top-bottom'>{props.paragraph}</p>
               <button data-aos='zoom-out-down' className='block-info-button'>View Project</button>
             </section>
             {image ? image : <h1 data-aos='zoom-out-left' className='big-quote'>
-               Mollit consequat esse ea cillum.
+               Just Do It
             </h1>}
         </div>
         )
