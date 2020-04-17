@@ -1,7 +1,7 @@
 import React, { useState, useEffect,  } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import BlockInfo from './components/Header/BlockInfo/BlockInfo';
+import BlockInfo from './components/BlockInfo/BlockInfo';
 import {connect} from 'react-redux'
 import 'aos/dist/aos.css'
 import Aos from "aos"
