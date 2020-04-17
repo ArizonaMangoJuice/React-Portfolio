@@ -1,7 +1,7 @@
 
 ## My React Portfolio
 
-If you want the full description of what my goals were for this project. Please visit my blog for more information [https://isaelblogs.netlify.com/](https://isaelblogs.netlify.com/)
+If you want the full description of what my goals were for this project. Please visit my blog for more information [https://isaellizama.com](https://isaellizama.com)
 
 <!-- ### `npm start`
 
