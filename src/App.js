@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 import 'aos/dist/aos.css'
 import Aos from "aos"
 import {staticData} from './Static'
+import Footer from './components/Footer/Footer';
 
 const mapStateToProps = state => ({
   divY: state.landingPage.divY
@@ -64,6 +65,7 @@ function App(props) {
         
       </div>
       {blockInfo}
+      <Footer />
     </div>
   );
 }
