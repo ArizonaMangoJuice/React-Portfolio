@@ -19,17 +19,19 @@ function App(props) {
   console.log(staticData)
 
   let blockInfo = staticData.map((e,i) => (
-    <div data-aos={animations[i]} className={`block-container ${background[i]}`}>
-      <BlockInfo
-        img={e.img} 
-        me={e.me} 
-        imgSrc={e.imgSrc}
-        title={e.title}
-        desc={e.desc}
-        paragraph={e.paragraph}
-        buttonTitle={e && e.buttonTitle}
-        link={e.link}
-      />
+    <div className={`${background[i]}`}>
+      <div data-aos={animations[i]} className={`block-container ${background[i]}`}>
+        <BlockInfo
+          img={e.img} 
+          me={e.me} 
+          imgSrc={e.imgSrc}
+          title={e.title}
+          desc={e.desc}
+          paragraph={e.paragraph}
+          buttonTitle={e && e.buttonTitle}
+          link={e.link}
+        />
+      </div>
     </div>
   ))
 
