@@ -35,7 +35,7 @@ const BlockInfo = React.forwardRef((props, ref) => {
               <h4 data-aos='fade-left' className='small-padding-top-bottom'>{props.title}</h4>
               <h2 data-aos='fade-right'className='small-padding-top-bottom'>{props.desc}</h2>
               <p data-aos='fade-down' className='small-padding-top-bottom'>{props.paragraph}</p>
-              <button data-aos='zoom-out-down' className='block-info-button'>View Project</button>
+              <a href={props.link ? props.link : '#'} data-aos='zoom-out-down' className='block-info-button'>{props.buttonTitle ? props.buttonTitle : 'View Project'}</a>
             </section>
             {image ? image : <h1 data-aos='zoom-out-left' className='big-quote'>
                Just Do It

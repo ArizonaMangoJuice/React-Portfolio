@@ -51,6 +51,8 @@ function App(props) {
           Also, the feeling that you can work as a team, create an app that will help multiple people is one of the best feelings I have ever felt. 
           When i'm not developing I also love doing anything that is competitive, building and fixing computers,
           and hanging out with friends.`}
+          buttonTitle={'Visit Blog'}
+          link={'https://isaelblogs.netlify.app/'}
         />
       </div>
       <div data-aos='fade-up' className='block-container lime-green' >
