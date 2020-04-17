@@ -12,3 +12,8 @@
 .header-hidden{
     top: -80px;
 }
+
+.header img {
+    height: 70px;
+    margin-left: 50px;
+}

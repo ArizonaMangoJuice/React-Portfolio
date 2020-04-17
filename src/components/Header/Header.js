@@ -33,7 +33,7 @@ export default function Header (props) {
             ref={measuredRef}
             className={`header  moderate-pink ${visible ? 'header-hidden' : ''}`}
             >
-            <h1>AMJ</h1>
+            <img src='https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2FIsael%20LIZAMa%20(4).png?alt=media' />
         </nav>
     )
 }
