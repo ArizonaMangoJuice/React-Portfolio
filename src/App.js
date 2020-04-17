@@ -25,6 +25,16 @@ function App(props) {
   return (
     <div className="App">
       <Header />
+      <div className='big-container'>
+        <h1>Looking For a Full Stack Developer?</h1>
+        <div className='p-container'>
+          <p>
+            I Am a Full Stack Developer Living In Colorado, USA
+          </p>
+          <p>I Make Web Applications with React, Python, and Svelter</p>
+        </div>
+        
+      </div>
       <div data-aos='fade-in' className='block-container  first-margin'>
         <BlockInfo img={true} me={true} src={'https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2Fme.jpg?alt=media'}/>
       </div>
