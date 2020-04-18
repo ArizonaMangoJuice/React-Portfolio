@@ -7,7 +7,6 @@ import Aos from "aos"
 export default function BlogPreview(props){
     let data = [...staticData]
     let [count, setCount] = useState(0)
-    // let [array, setArray] = useState(data)
     let [newLoad, setNewLoad] = useState(true)
 
     useEffect(() => {
@@ -27,28 +26,26 @@ export default function BlogPreview(props){
         return () => {
             clearInterval(interval)
             clearInterval(makeNew)
-            // setNewLoad(newLoad => false)
         };
       }, [count]);
 
 
     return (
-        <div className='blog-container'>
-            <div>
-                <div className='blog-main'>
+        <div className='blog-container moderate-pink'>
+                <h1 className='blog-title'>Read My Latest Posts!</h1>
+                <div  className={`blog ${newLoad ? 'blog-fade' : ''}`} >
                     <h1>{count === 0 ? data[data.length-1].title : data[count - 1].title}</h1>
                     <h3>{count === 0 ? data[data.length-1].desc : data[count  -1].desc}</h3>
                 </div>
-                <div className={`blog-main ${newLoad ? 'blog-fade' : ''}`}>
+                <div  className={`blog blog-main ${newLoad ? 'blog-fade' : ''}`} style={{backgroundImage: `url(${data[count].imgSrc})`, backgroundPosition:'center'}}>
                     <h1>{data[count].title}</h1>
                     <h3>{data[count].desc}</h3>
                     <div className='loading-bar'></div>
                 </div>
-               <div className='blog-main'>
+               <div  className={`blog ${newLoad ? 'blog-fade' : ''}`}>
                     <h1>{!data[count + 1] ? data[data.length-1].title : data[count + 1].title}</h1>
                     <h3>{!data[count + 1] ? data[data.length-1].desc : data[count  + 1].desc}</h3>
                 </div>
-            </div>
         </div>
     )
 }
