@@ -7,6 +7,7 @@ import 'aos/dist/aos.css'
 import Aos from "aos"
 import {staticData} from './Static'
 import Footer from './components/Footer/Footer';
+import BlogPreview from './components/BlogPreview/BlogPreview';
 
 const mapStateToProps = state => ({
   divY: state.landingPage.divY
@@ -18,6 +19,14 @@ function App(props) {
   let background = ['lime-green', 'very-soft-orange', 'soft-orange','moderate-pink']
 
   console.log(staticData)
+
+  useEffect(() => {
+    // window.addEventListener('scroll', handleScroll)
+    Aos.init({duration: 600})
+    return () => {
+      // window.removeEventListener('scroll', handleScroll)
+    }
+  })
 
   let blockInfo = staticData.map((e,i) => (
     <div className={`${background[i]}`}>
@@ -38,13 +47,7 @@ function App(props) {
 
   console.log(blockInfo)
 
-  useEffect(() => {
-    // window.addEventListener('scroll', handleScroll)
-    Aos.init({duration: 600})
-    return () => {
-      // window.removeEventListener('scroll', handleScroll)
-    }
-  })
+ 
 
   return (
     <div className="App">
@@ -64,6 +67,7 @@ function App(props) {
         </div>
         
       </div>
+      <BlogPreview />
       {blockInfo}
       <Footer />
     </div>

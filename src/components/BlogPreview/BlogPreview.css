@@ -1,0 +1,28 @@
+.blog-container{
+    height: 700px;
+}
+
+.loading-bar{
+    height: 5px;
+    width: 100%;
+    background-color: red;
+    animation: loading 5s infinite;
+    
+
+}
+
+.blog-fade{ 
+    animation: fading .5s;
+    animation-iteration-count: 1
+}
+
+@keyframes loading{
+    from {width: 0%}
+    to{width: 100%}
+}
+
+@keyframes fading{
+    from {opacity:  0%}
+    to{opacity:  100%}
+}
+
