@@ -40,25 +40,25 @@ export default function BlogPreview(props){
         }
     }, 5000)
 
-    console.log('result', result)
+    // console.log('result', result)
     return (
         <div className='moderate-pink'>
             <div data-aos='fade-down' className='blog-container moderate-pink'>
                     <h1 data-aos='fade-right' className='blog-title'>Read My Latest Posts!</h1>
                 <BlogCard 
-                    result={result}
+                    result={result ? result : []}
                     // data={data}
                     count={count}
                     left={true}
                 />
                 <BlogCard 
-                    result={result}
+                    result={result ? result : []}
                     // data={data}
                     count={count}
                     main={true}
                 />
                 <BlogCard 
-                    result={result}
+                    result={result ? result : []}
                     // data={data}
                     count={count}
                 />
