@@ -18,16 +18,18 @@ export default function BlogPreview(props){
 
       if(count === 3) setCount(0)
 
-      useInterval(() => {
+    useInterval(() => {
         if(!newLoad) {
             setNewLoad(true)
             setCount(count + 1)
 
         } else {
             setCount(count + 1)
-            setNewLoad(false)
         }
     }, 5000)
+
+    useInterval(() => {setNewLoad(false)}, 4999)
+
 
     return (
         <div className='moderate-pink'>
