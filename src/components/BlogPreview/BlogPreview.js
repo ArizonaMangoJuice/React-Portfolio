@@ -47,19 +47,19 @@ export default function BlogPreview(props){
                     <h1 data-aos='fade-right' className='blog-title'>Read My Latest Posts!</h1>
                 <BlogCard 
                     result={result}
-                    data={data}
+                    // data={data}
                     count={count}
                     left={true}
                 />
                 <BlogCard 
                     result={result}
-                    data={data}
+                    // data={data}
                     count={count}
                     main={true}
                 />
                 <BlogCard 
                     result={result}
-                    data={data}
+                    // data={data}
                     count={count}
                 />
             </div>
