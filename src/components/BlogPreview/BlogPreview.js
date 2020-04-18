@@ -33,16 +33,25 @@ export default function BlogPreview(props){
     return (
         <div className='blog-container moderate-pink'>
                 <h1 className='blog-title'>Read My Latest Posts!</h1>
-                <div  className={`blog ${newLoad ? 'blog-fade' : ''}`} >
+                <div  
+                    className={`blog ${newLoad ? 'blog-fade' : ''}`}
+                    style={count === 0 ? {backgroundImage: `url(${data[data.length-1].imgSrc})`, backgroundPosition:'center'} : {backgroundImage: `url(${data[count - 1].imgSrc})`, backgroundPosition:'center'}}
+                >
                     <h1>{count === 0 ? data[data.length-1].title : data[count - 1].title}</h1>
                     <h3>{count === 0 ? data[data.length-1].desc : data[count  -1].desc}</h3>
                 </div>
-                <div  className={`blog blog-main ${newLoad ? 'blog-fade' : ''}`} style={{backgroundImage: `url(${data[count].imgSrc})`, backgroundPosition:'center'}}>
+                <div 
+                    className={`blog blog-main ${newLoad ? 'blog-fade' : ''}`} 
+                    style={{backgroundImage: `url(${data[count].imgSrc})`, backgroundPosition:'center'}}
+                >
                     <h1>{data[count].title}</h1>
                     <h3>{data[count].desc}</h3>
                     <div className='loading-bar'></div>
                 </div>
-               <div  className={`blog ${newLoad ? 'blog-fade' : ''}`}>
+               <div  
+                    className={`blog ${newLoad ? 'blog-fade' : ''}`}
+                    style={!data[count + 1] ? {backgroundImage: `url(${data[data.length-1].imgSrc})`, backgroundPosition:'center'} : {backgroundImage: `url(${data[count + 1].imgSrc})`, backgroundPosition:'center'}}
+                >
                     <h1>{!data[count + 1] ? data[data.length-1].title : data[count + 1].title}</h1>
                     <h3>{!data[count + 1] ? data[data.length-1].desc : data[count  + 1].desc}</h3>
                 </div>
