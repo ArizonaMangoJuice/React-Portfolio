@@ -33,7 +33,6 @@ export default function BlogPreview(props){
 
     useInterval(() => {
         if(!newLoad) {
-            // setNewLoad(true)
             setCount(count + 1)
 
         } else {
