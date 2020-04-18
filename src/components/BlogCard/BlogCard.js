@@ -1,11 +1,10 @@
 import React from 'react'
 let REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
+let url 
 
 export default function BlogCard(props){
-    if(!props.result || props.result.length === 0) return (<div>LOADING</div>)
+    if(!props.result || props.result.length === 0) return <div>LOADING</div>
     
-    let url 
-
     // console.log('result', props.result)
 
     if(props.left){

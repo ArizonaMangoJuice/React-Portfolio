@@ -16,6 +16,12 @@ export default function BlogPreview(props){
     let [newLoad, setNewLoad] = useState(true)
     let [result, setResult] = useState(false)
 
+    if(count === 3) setCount(0)
+
+    useInterval(() => {
+            setCount(count + 1)
+    }, 5000)
+
     useEffect(() => {
         Aos.init({duration: 600})
         if(result === false) {
@@ -30,13 +36,7 @@ export default function BlogPreview(props){
         }
         return () => {
         };
-      });
-
-      if(count === 3) setCount(0)
-
-    useInterval(() => {
-            setCount(count + 1)
-    }, 5000)
+      }, [result]);
 
     // console.log('result', result)
     return (
