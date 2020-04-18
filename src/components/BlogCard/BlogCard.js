@@ -47,12 +47,13 @@ export default function BlogCard(props){
         )
     }
 
-    url = !props.result[props.count + 1] ? props.result[props.result.length - 1].linkName : props.result[props.count + 1].linkName
+    if(props.result ){
+        url = !props.result[props.count + 1] ? props.result[props.result.length - 1].linkName : props.result[props.count + 1].linkName
 
-    url = encodeURI(`https://isaelblogs.netlify.app/blogPages/${url}`)
+        url = encodeURI(`https://isaelblogs.netlify.app/blogPages/${url}`)
+    }
 
     return (
-        
         <a  
             href={url}
             className={`blog relative`}
