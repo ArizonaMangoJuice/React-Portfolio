@@ -14,12 +14,12 @@ export default function BlogPreview(props){
 
         const interval = setInterval(() => {
           setCount(count => count + 1);
-          setNewLoad(newLoad => true)
+          setNewLoad(true)
         }, 5000);   
 
         const makeNew = setInterval( () => {
-            setNewLoad(newLoad => false)
-        }, 4500)
+            setNewLoad(false)
+        }, 4999)
 
         if(count === 3) setCount(0)
 
