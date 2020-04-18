@@ -29,7 +29,7 @@ export default function BlogPreview(props){
         }
         return () => {
         };
-      }, []);
+      }, [result]);
 
       if(count === 3) setCount(0)
 
