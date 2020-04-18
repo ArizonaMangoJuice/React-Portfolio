@@ -17,7 +17,7 @@
 .loading-bar{
     height: 5px;
     width: 100%;
-    background-color: red;
+    background-color: white;
     animation: loading 5s infinite;
 }
 
@@ -44,4 +44,12 @@
     margin: 25px;
     border-radius: 5px;
     background-color: #607998;
+}
+
+.text{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
 }
