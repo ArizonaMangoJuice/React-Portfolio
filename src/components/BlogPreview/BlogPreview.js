@@ -8,6 +8,8 @@ import BlogCard from '../BlogCard/BlogCard'
 
 let REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
 
+console.log(REACT_APP_SERVER_URL)
+
 export default function BlogPreview(props){
     let data = [...staticData]
     let [count, setCount] = useState(0)
