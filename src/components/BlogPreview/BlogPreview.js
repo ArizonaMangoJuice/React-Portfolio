@@ -20,7 +20,7 @@ export default function BlogPreview(props){
 
     useInterval(() => {
         if(!newLoad) {
-            setNewLoad(true)
+            // setNewLoad(true)
             setCount(count + 1)
 
         } else {
@@ -28,15 +28,17 @@ export default function BlogPreview(props){
         }
     }, 5000)
 
-    useInterval(() => {setNewLoad(false)}, 4999)
+    // useInterval(() => {setNewLoad(false)}, 4999)
 
-
+    // ${newLoad ? 'blog-fade' : ''}
+    // ${newLoad ? 'blog-fade' : ''}
+    // ${newLoad ? 'blog-fade' : ''}
     return (
         <div className='moderate-pink'>
             <div data-aos='fade-down' className='blog-container moderate-pink'>
                     <h1 data-aos='fade-right' className='blog-title'>Read My Latest Posts!</h1>
                     <div  
-                        className={`blog relative ${newLoad ? 'blog-fade' : ''}`}
+                        className={`blog relative`}
                         style={count === 0 ? {backgroundImage: `url(${data[data.length-1].imgSrc})`, backgroundPosition:'center'} : {backgroundImage: `url(${data[count - 1].imgSrc})`, backgroundPosition:'center'}}
                     >
                         <div className='text dark-blue-background'>
@@ -45,7 +47,7 @@ export default function BlogPreview(props){
                         </div>
                     </div>
                     <div 
-                        className={`blog relative blog-main ${newLoad ? 'blog-fade' : ''}`} 
+                        className={`blog relative blog-main`} 
                         style={{backgroundImage: `url(${data[count].imgSrc})`, backgroundPosition:'center'}}
                     >
                         <div className='text dark-blue-background'>
@@ -55,7 +57,7 @@ export default function BlogPreview(props){
                         </div>
                     </div>
                 <div  
-                        className={`blog relative ${newLoad ? 'blog-fade' : ''}`}
+                        className={`blog relative`}
                         style={!data[count + 1] ? {backgroundImage: `url(${data[data.length-1].imgSrc})`, backgroundPosition:'center'} : {backgroundImage: `url(${data[count + 1].imgSrc})`, backgroundPosition:'center'}}
                     >
                         <div className='text dark-blue-background'>
