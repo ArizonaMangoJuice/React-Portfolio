@@ -7,13 +7,11 @@
     width: 100%;
     background-color: red;
     animation: loading 5s infinite;
-    
-
 }
 
 .blog-fade{ 
     animation: fading .5s;
-    animation-iteration-count: 1
+    /* animation-iteration-count: 1 */
 }
 
 @keyframes loading{

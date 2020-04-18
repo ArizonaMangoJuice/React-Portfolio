@@ -4,17 +4,11 @@ import {staticData} from '../../Static'
 import 'aos/dist/aos.css'
 import Aos from "aos"
 
-let updateArray = arr => {
-
-}
-
 export default function BlogPreview(props){
     let data = [...staticData]
     let [count, setCount] = useState(0)
-    let [array, setArray] = useState(data)
-    let [newLoad, setNewLoad] = useState(false)
-
-    console.log('this i sin the blog ', array)
+    // let [array, setArray] = useState(data)
+    let [newLoad, setNewLoad] = useState(true)
 
     useEffect(() => {
         Aos.init({duration: 600})
@@ -22,17 +16,21 @@ export default function BlogPreview(props){
         const interval = setInterval(() => {
           setCount(count => count + 1);
           setNewLoad(newLoad => true)
-          console.log('setting to true', newLoad)
         }, 5000);   
 
+        const makeNew = setInterval( () => {
+            setNewLoad(newLoad => false)
+        }, 4500)
 
         if(count === 3) setCount(0)
 
         return () => {
             clearInterval(interval)
-            // setNewLoad(newLoad => !newLoad)
+            clearInterval(makeNew)
+            // setNewLoad(newLoad => false)
         };
-      }, [count, newLoad]);
+      }, [count]);
+
 
     return (
         <div className='blog-container'>
@@ -51,7 +49,6 @@ export default function BlogPreview(props){
                     <h3>{!data[count + 1] ? data[data.length-1].desc : data[count  + 1].desc}</h3>
                 </div>
             </div>
-            <p>this will be one in one second {count}</p>
         </div>
     )
 }
