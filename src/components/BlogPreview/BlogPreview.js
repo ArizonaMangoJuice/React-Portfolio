@@ -22,6 +22,7 @@ export default function BlogPreview(props){
             fetch(`${REACT_APP_SERVER_URL}/api/page/blogpreview`)
             .then(res => res.json())
             .then(result => {
+                console.log('setting the result')
                 setResult(result)
             }, error => {
                 console.log('this is the error',error)
@@ -29,7 +30,7 @@ export default function BlogPreview(props){
         }
         return () => {
         };
-      }, [count]);
+      }, [result]);
 
       if(count === 3) setCount(0)
 
