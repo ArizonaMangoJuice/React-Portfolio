@@ -8,6 +8,12 @@
     flex-wrap: wrap;
     color: white;
 }
+
+@keyframes fading{
+    from {opacity:  0%}
+    to{opacity:  100%}
+}
+
 .blog-title{
     width: 100%;
     text-align: center;
@@ -31,10 +37,6 @@
     to{width: 100%}
 }
 
-@keyframes fading{
-    from {opacity:  0%}
-    to{opacity:  100%}
-}
 
 
 .blog{
