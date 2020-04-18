@@ -2,7 +2,7 @@ import React from 'react'
 let REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
 
 export default function BlogCard(props){
-    if(!props.result) return (<div>LOADING</div>)
+    if(!props.result && props.result.length === 0) return (<div>LOADING</div>)
     let url 
 
 
