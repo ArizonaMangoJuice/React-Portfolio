@@ -18,14 +18,6 @@ export default function BlogPreview(props){
 
     useEffect(() => {
         Aos.init({duration: 600})
-        
-        return () => {
-        };
-      });
-
-      if(count === 3) setCount(0)
-
-    useInterval(() => {
         if(result === false) {
             fetch(`${REACT_APP_SERVER_URL}/api/page/blogpreview`)
             .then(res => res.json())
@@ -36,12 +28,14 @@ export default function BlogPreview(props){
                 console.log('this is the error',error)
             })
         }
-        if(!newLoad) {
-            setCount(count + 1)
+        return () => {
+        };
+      });
 
-        } else {
+      if(count === 3) setCount(0)
+
+    useInterval(() => {
             setCount(count + 1)
-        }
     }, 5000)
 
     // console.log('result', result)

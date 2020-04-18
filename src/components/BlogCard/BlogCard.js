@@ -6,7 +6,7 @@ export default function BlogCard(props){
     
     let url 
 
-    console.log('result', props.result)
+    // console.log('result', props.result)
 
     if(props.left){
 
