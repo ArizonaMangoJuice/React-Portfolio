@@ -27,16 +27,11 @@ export default function BlogPreview(props){
         if(!result) {
             fetch(`${REACT_APP_SERVER_URL}/api/page/blogpreview`)
             .then(res => res.json())
-            .then(result => {
-                console.log('setting the result')
-                return setResult(result)
-            }, error => {
-                console.log('this is the error',error)
-            })
+            .then(result => setResult(result))
         }
         return () => {
         };
-      }, [count]);
+      }, [result]);
 
     // console.log('result', result)
     return (
