@@ -32,8 +32,28 @@ export default function Clock(){
     console.log(fetchResult)
 
     return (
-        <div>
-            {currentCount}{fetchResult === '' ? null : fetchResult && (fetchResult[currentCount] && fetchResult[currentCount].linkName) ? fetchResult[currentCount].linkName : ''}
+
+        <div className='moderate-pink'>
+             <div data-aos='fade-down' className='blog-container moderate-pink'>
+                     <h1 data-aos='fade-right' className='blog-title'>Read My Latest Posts!</h1>
+                <BlogCard 
+                    result={fetchResult}
+                    // data={data}
+                    count={currentCount}
+                    left={true}
+                />
+                <BlogCard 
+                    result={fetchResult}
+                    // data={data}
+                    count={currentCount}
+                    main={true}
+                />
+                <BlogCard 
+                    result={fetchResult}
+                    // data={data}
+                    count={currentCount}
+                />
+            </div>
         </div>
     )
 }
