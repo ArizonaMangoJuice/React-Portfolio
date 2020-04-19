@@ -29,7 +29,7 @@ export default function BlogPreview(props){
             .then(res => res.json())
             .then(result => {
                 console.log('setting the result')
-                setResult(result)
+                return setResult(result)
             }, error => {
                 console.log('this is the error',error)
             })
