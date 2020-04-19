@@ -29,6 +29,8 @@ export default function Clock(){
         }
     }, [currentCount, fetchResult])
 
+    console.log(fetchResult)
+
     return (
         <div>
             {currentCount}{fetchResult === '' ? null : fetchResult && (fetchResult[currentCount] && fetchResult[currentCount].linkName) ? fetchResult[currentCount].linkName : ''}
