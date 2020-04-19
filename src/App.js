@@ -45,7 +45,7 @@ function App(props) {
     </div>
   ))
 
-  console.log(blockInfo)
+  // console.log(blockInfo)
 
  
 
