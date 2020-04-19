@@ -31,7 +31,7 @@ export default function Clock(){
 
     return (
         <div>
-            {currentCount}{fetchResult === '' ? null : fetchResult[currentCount].linkName}
+            {currentCount}{fetchResult === '' ? null : fetchResult && (fetchResult[currentCount] && fetchResult[currentCount].linkName) ? fetchResult[currentCount].linkName : ''}
         </div>
     )
 }
