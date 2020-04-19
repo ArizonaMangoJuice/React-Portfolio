@@ -13,25 +13,32 @@ console.log(REACT_APP_SERVER_URL)
 export default function BlogPreview(props){
     // let data = [...staticData]
     let [count, setCount] = useState(0)
-    let [newLoad, setNewLoad] = useState(true)
-    let [result, setResult] = useState(undefined)
+    let [newLoad, setNewLoad] = useState('')
+    let [result, setResult] = useState(false)
 
     if(count === 3) setCount(0)
 
     useInterval(() => {
+            if(!result){
+                fetch(`${REACT_APP_SERVER_URL}/api/page/blogpreview`)
+            .then(res => res.json())
+            .then(result => setResult(result))
+            }
             setCount(count + 1)
     }, 5000)
 
     useEffect(() => {
         Aos.init({duration: 600})
-        if(!result) {
-            fetch(`${REACT_APP_SERVER_URL}/api/page/blogpreview`)
-            .then(res => res.json())
-            .then(result => setResult(result))
-        }
+
+        // if(!result) {
+            // fetch(`${REACT_APP_SERVER_URL}/api/page/blogpreview`)
+            // .then(res => res.json())
+            // .then(result => setResult(result))
+        // }
+
         return () => {
         };
-      }, [result]);
+      }, []);
 
     // console.log('result', result)
     return (
