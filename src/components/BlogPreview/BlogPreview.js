@@ -14,7 +14,7 @@ export default function Clock(){
     const [fetchResult, setFetchResult] = useState('')
 
     useEffect(() => {
-        if(currentCount === 4) setCount(0)
+        if(currentCount === 3) setCount(0)
 
         if(fetchResult === ''){
             fetch(`${REACT_APP_SERVER_URL}/api/page/blogpreview`)
