@@ -19,26 +19,21 @@ export default function BlogPreview(props){
     if(count === 3) setCount(0)
 
     useInterval(() => {
-            if(!result){
-                fetch(`${REACT_APP_SERVER_URL}/api/page/blogpreview`)
-            .then(res => res.json())
-            .then(result => setResult(result))
-            }
             setCount(count + 1)
     }, 5000)
 
     useEffect(() => {
         Aos.init({duration: 600})
 
-        // if(!result) {
-            // fetch(`${REACT_APP_SERVER_URL}/api/page/blogpreview`)
-            // .then(res => res.json())
-            // .then(result => setResult(result))
-        // }
-
+        if(!result) {
+            fetch(`${REACT_APP_SERVER_URL}/api/page/blogpreview`)
+            .then(res => res.json())
+            .then(result => setResult(result))
+        }
+        
         return () => {
         };
-      }, []);
+      }, [result]);
 
     // console.log('result', result)
     return (
