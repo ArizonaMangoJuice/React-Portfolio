@@ -25,7 +25,7 @@ export default function BlogPreview(props){
     useEffect(() => {
         Aos.init({duration: 600})
 
-        if(result.length === 0) {
+        if(!result) {
             fetch(`${REACT_APP_SERVER_URL}/api/page/blogpreview`)
             .then(res => res.json())
             .then(result => setResult(prevResult => result))
