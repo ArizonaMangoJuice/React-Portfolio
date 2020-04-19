@@ -18,7 +18,7 @@ function App(props) {
 
   let background = ['lime-green', 'very-soft-orange', 'soft-orange','moderate-pink']
 
-  console.log(staticData)
+  // console.log(staticData)
 
   useEffect(() => {
     // window.addEventListener('scroll', handleScroll)
