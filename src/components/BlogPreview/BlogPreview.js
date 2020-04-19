@@ -44,19 +44,19 @@ export default function BlogPreview(props){
             <div data-aos='fade-down' className='blog-container moderate-pink'>
                     <h1 data-aos='fade-right' className='blog-title'>Read My Latest Posts!</h1>
                 <BlogCard 
-                    result={result ? result : undefined}
+                    result={result && result.length === 4 ? result : undefined}
                     // data={data}
                     count={count}
                     left={true}
                 />
                 <BlogCard 
-                    result={result ? result : undefined}
+                    result={result && result.length === 4 ? result : undefined}
                     // data={data}
                     count={count}
                     main={true}
                 />
                 <BlogCard 
-                    result={result ? result : undefined}
+                    result={result && result.length === 4 ? result : undefined}
                     // data={data}
                     count={count}
                 />
@@ -64,3 +64,4 @@ export default function BlogPreview(props){
         </div>
     )
 }
+
