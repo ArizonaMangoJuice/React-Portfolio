@@ -36,7 +36,7 @@ export default function BlogPreview(props){
         }
         return () => {
         };
-      }, [result]);
+      }, [count]);
 
     // console.log('result', result)
     return (
