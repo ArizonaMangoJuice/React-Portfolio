@@ -14,7 +14,7 @@ export default function BlogPreview(props){
     // let data = [...staticData]
     let [count, setCount] = useState(0)
     let [newLoad, setNewLoad] = useState(true)
-    let [result, setResult] = useState(false)
+    let [result, setResult] = useState()
 
     if(count === 3) setCount(0)
 
@@ -44,19 +44,19 @@ export default function BlogPreview(props){
             <div data-aos='fade-down' className='blog-container moderate-pink'>
                     <h1 data-aos='fade-right' className='blog-title'>Read My Latest Posts!</h1>
                 <BlogCard 
-                    result={result && result.length === 4 ? result : undefined}
+                    result={result && result[0] ? result : undefined}
                     // data={data}
                     count={count}
                     left={true}
                 />
                 <BlogCard 
-                    result={result && result.length === 4 ? result : undefined}
+                    result={result && result[0] ? result : undefined}
                     // data={data}
                     count={count}
                     main={true}
                 />
                 <BlogCard 
-                    result={result && result.length === 4 ? result : undefined}
+                    result={result && result[0] ? result : undefined}
                     // data={data}
                     count={count}
                 />
