@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './BlogPreview.css'
-import {staticData} from '../../Static'
+// import {staticData} from '../../Static'
 import 'aos/dist/aos.css'
 import Aos from "aos"
 import {useInterval} from '../UseInterval/UseInterval'
@@ -11,10 +11,10 @@ let REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
 console.log(REACT_APP_SERVER_URL)
 
 export default function BlogPreview(props){
-    let data = [...staticData]
+    // let data = [...staticData]
     let [count, setCount] = useState(0)
     let [newLoad, setNewLoad] = useState(true)
-    let [result, setResult] = useState(false)
+    let [result, setResult] = useState()
 
     if(count === 3) setCount(0)
 
@@ -24,7 +24,7 @@ export default function BlogPreview(props){
 
     useEffect(() => {
         Aos.init({duration: 600})
-        if(result === false) {
+        if(!result) {
             fetch(`${REACT_APP_SERVER_URL}/api/page/blogpreview`)
             .then(res => res.json())
             .then(result => {
