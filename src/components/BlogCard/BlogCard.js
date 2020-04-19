@@ -4,7 +4,7 @@ let url
 
 export default function BlogCard(props){
     console.log('props in blog card', props)
-    if(!props.result) return <div>{props.count}}</div>
+    if(!props.result || props.result.length === 0 && !props.result.title) return <div>{props.count}}</div>
     
     // console.log('result', props.result)
 
