@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 })
 
 const BlockInfo = React.forwardRef((props, ref) => {
-  if(props.forwardRef) console.log(props, ref)
+  // if(props.forwardRef) console.log(props, ref)
   
   let image;
 
