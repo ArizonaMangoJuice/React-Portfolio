@@ -6,8 +6,8 @@ export default function Footer(props){
         <footer className='moderate-pink'>
             <nav className='social-media'>
                 <a data-aos='fade-down' href='https://github.com/ArizonaMangoJuice?tab=repositories'><i className="fab fa-github"></i></a>
-                <a data-aos='fade-down' href=''><i className="fab fa-linkedin-in"></i></a>
-                <a data-aos='fade-down' href=''><i className="fas fa-blog"></i></a>
+                <a data-aos='fade-down' href='https://www.linkedin.com/in/isael-lizama-9a128b130/'><i className="fab fa-linkedin-in"></i></a>
+                <a data-aos='fade-down' href='https://isaelblogs.netlify.app/'><i className="fas fa-blog"></i></a>
             </nav>
             <p>© 2020. Isael Lizama. All rights reserved. Website Design by <a className='footer-link' href='https://github.com/ArizonaMangoJuice?tab=repositories'>AMJ</a></p>
         </footer>

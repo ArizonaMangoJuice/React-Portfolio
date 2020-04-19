@@ -6,7 +6,7 @@ import Aos from "aos"
 import {useInterval} from '../UseInterval/UseInterval'
 import BlogCard from '../BlogCard/BlogCard'
 
-// let REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
+let REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
 
 console.log(REACT_APP_SERVER_URL)
 export default function Clock(){

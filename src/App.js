@@ -61,9 +61,9 @@ function App(props) {
           <p>I Make Web Applications with React, Python, and Svelter</p>
         </div>
         <div className='social-media'>
-          <a data-aos='fade-down' href=''><i className="fab fa-github"></i></a>
-          <a data-aos='fade-down' href=''><i className="fab fa-linkedin-in"></i></a>
-          <a data-aos='fade-down' href=''><i className="fas fa-blog"></i></a>
+          <a data-aos='fade-down' href='https://github.com/ArizonaMangoJuice?tab=repositories'><i className="fab fa-github"></i></a>
+          <a data-aos='fade-down' href='https://www.linkedin.com/in/isael-lizama-9a128b130/'><i className="fab fa-linkedin-in"></i></a>
+          <a data-aos='fade-down' href='https://isaelblogs.netlify.app/'><i className="fas fa-blog"></i></a>
         </div>
         
       </div>
