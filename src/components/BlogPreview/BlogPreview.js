@@ -14,7 +14,7 @@ export default function BlogPreview(props){
     // let data = [...staticData]
     let [count, setCount] = useState(0)
     let [newLoad, setNewLoad] = useState(true)
-    let [result, setResult] = useState()
+    let [result, setResult] = useState(undefined)
 
     if(count === 3) setCount(0)
 
