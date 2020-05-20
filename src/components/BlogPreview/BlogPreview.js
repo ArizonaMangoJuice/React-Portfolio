@@ -12,43 +12,56 @@ console.log(REACT_APP_SERVER_URL)
 export default function Clock(){
     const [currentCount, setCount] = useState(0)
     const [fetchResult, setFetchResult] = useState('')
+    const [switched, setswitched] = useState(false)
 
     useEffect(() => {
-        if(currentCount === 3) setCount(0)
-
         if(fetchResult === ''){
             fetch(`${REACT_APP_SERVER_URL}/api/page/blogpreview`)
                 .then(res => res.json())
-                .then(result => setFetchResult(result))
+                .then(result => {
+                    setFetchResult(result)
+                })
         }
+    }, [fetchResult])
+
+    useEffect(() => {
+        if(currentCount === 3) setCount(0)
         
-        const id = setInterval(() => setCount(currentCount => currentCount + 1), 5000)
+        const id = setInterval(() => {
+            setswitched(true)
+            setCount(currentCount => currentCount + 1)
+           return setTimeout(() => setswitched(false), 1000)
+        }, 5000)
 
         return () => {
             clearInterval(id)
         }
-    }, [currentCount, fetchResult])
+    }, [currentCount])
 
-    // console.log(fetchResult)
+    console.log(switched)
 
     return (
 
         <div className='moderate-pink'>
-             <div data-aos='fade-down' className='blog-container moderate-pink'>
+             <div  className='blog-container moderate-pink'>
                      <h1 data-aos='fade-right' className='blog-title'>Read My Latest Posts!</h1>
                 <BlogCard 
                     result={fetchResult}
                     // data={data}
                     count={currentCount}
                     left={true}
+                    test={'fade-in'}
+                    loading={switched}
                 />
                 <BlogCard 
                     result={fetchResult}
                     // data={data}
                     count={currentCount}
+                    loading={switched}
                     main={true}
                 />
                 <BlogCard 
+                    loading={switched}
                     result={fetchResult}
                     // data={data}
                     count={currentCount}

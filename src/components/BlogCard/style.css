@@ -37,3 +37,14 @@
     align-items: center;
     justify-content: center;
 }
+
+
+.blog-fade{ 
+    animation: fading .6s ease-in-out;
+    /* animation-iteration-count: 1 */
+}
+
+@keyframes fading{
+    from {opacity:  0%}
+    to{opacity:  100%}
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import {transition, Transition} from 'react-transition-group'
 import './style.css'
 
@@ -21,6 +21,7 @@ const transitionStyle = {
 
 
 export default function BlogCard(props){
+
     if(!props.result || props.result.length === 0) return <div className='blog loading'><div className="lds-ripple"><div></div><div></div></div></div>
     
     // console.log('result', props.result)
@@ -35,7 +36,7 @@ export default function BlogCard(props){
             <Transition in={true} timeout={duration}  >
                 {state => (<a 
                     href={url} 
-                    className='blog relative'
+                    className={`blog relative ${props.loading ? 'blog-fade' : ''}`}
                     style={props.count === 0 
                         ? {backgroundImage: `url(${props.result[props.result.length - 1].pictures[0][0].link})`, backgroundPosition:'center', ...defaultStyle, ...transitionStyle[state]} 
                         : {backgroundImage: `url(${props.result[props.count - 1].pictures[0][0].link})`, backgroundPosition:'center', ...defaultStyle, ...transitionStyle[state]}}
@@ -58,7 +59,7 @@ export default function BlogCard(props){
         return(
             <a  
                 href={url} 
-                className={`blog relative`}
+                className={`blog relative ${props.loading ? 'blog-fade' : ''}`}
                 style={{backgroundImage: `url(${props.result[props.count].pictures[0][0].link})`, backgroundPosition:'center'}}
             >
                 <div className='text dark-blue-background'>
@@ -79,7 +80,7 @@ export default function BlogCard(props){
     return (
         <a  
             href={url}
-            className={`blog relative`}
+            className={`blog relative ${props.loading ? 'blog-fade' : ''}`}
             style={!props.result[props.count + 1] ? {backgroundImage: `url(${props.result[props.result.length - 1].pictures[0][0].link})`, backgroundPosition:'center'} : {backgroundImage: `url(${props.result[props.count + 1].pictures[0][0].link})`, backgroundPosition:'center'}}
         >
             <div className='text dark-blue-background'>
