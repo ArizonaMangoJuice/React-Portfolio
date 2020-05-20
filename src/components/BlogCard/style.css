@@ -41,6 +41,7 @@
 
 .blog-fade{ 
     animation: fading .6s ease-in-out;
+    -webkit-animation: fading .6s ease-in-out;
     /* animation-iteration-count: 1 */
 }
 
