@@ -30,7 +30,7 @@ export default function Clock(){
         const id = setInterval(() => {
             setswitched(true)
             setCount(currentCount => currentCount + 1)
-           return setTimeout(() => setswitched(false), 1000)
+            return setTimeout(() => setswitched(false), 1000)
         }, 5000)
 
         return () => {
