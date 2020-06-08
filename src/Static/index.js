@@ -17,13 +17,13 @@ export const staticData = [
         link: 'https://isaelblogs.netlify.app/'
     },
     {
-        title:'Lol Improver',
-        desc:'Improve your gaming skills',
-        paragraph:'Lol Improver is an app that lets you take notes on champions. Allowing you to see which champions you struggle against. Lol Improver lets you find player statistics. This app user React, MongoDB, Express, and mocha, chai, enzyme and, jest. You can find the repo here.',
+        title:'Noraceli Real Estate',
+        desc:'Modern web design for real estate',
+        paragraph:'Created a website that shows a real estate site from my design perspective',
         img: true,
         me: false,
-        imgSrc:'https://arizonamangojuice.github.io/portfolio/img/lolImprover.png',
-        link: 'https://focused-nightingale-b297e9.netlify.com/'
+        imgSrc:'https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2FNv.png?alt=media&token=4bfaa86c-5926-47a6-a65d-06da93c2e4fe',
+        link: 'https://nvre.netlify.app/'
     },
     {
         title:'Bonus Kid',
