@@ -245,3 +245,14 @@ body{
     font-size: .8em;
   }
 }
+
+@media only screen and (max-width: 768px){
+  .big-container {
+    height: fit-content;
+    padding: 20vh 5px 0 25px;
+  }
+
+  .blog-container{
+    height: auto;
+  }
+}
