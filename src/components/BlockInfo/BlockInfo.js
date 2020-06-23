@@ -26,7 +26,6 @@ const BlockInfo = React.forwardRef((props, ref) => {
     </div>
   )
 
-
   return (
         <div className='block-info ' ref={props.forwardRef}>
             <div className='theme-bar'></div>
