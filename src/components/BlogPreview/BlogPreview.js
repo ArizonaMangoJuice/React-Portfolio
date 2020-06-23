@@ -1,9 +1,7 @@
-import React, { useState, useEffect, Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import './BlogPreview.css'
 // import {staticData} from '../../Static'
 import 'aos/dist/aos.css'
-import Aos from "aos"
-import {useInterval} from '../UseInterval/UseInterval'
 import BlogCard from '../BlogCard/BlogCard'
 
 let REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL

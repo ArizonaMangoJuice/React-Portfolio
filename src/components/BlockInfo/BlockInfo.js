@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react'
+import React, { useEffect } from 'react'
 import {connect} from 'react-redux'
 import 'aos/dist/aos.css'
 import Aos from "aos"
@@ -17,12 +17,12 @@ const BlockInfo = React.forwardRef((props, ref) => {
 
   if(props.img && props.me) image = (
     <div data-aos='fade-down' className='me'>
-      <img className='' src={props.imgSrc} />
+      <img alt='block project' className='' src={props.imgSrc} />
     </div>)
 
   if(props.img && !props.me) image = (
     <div data-aos='fade-down' className='block-image-container'>
-      <img src={props.imgSrc} />
+      <img alt='main topic' src={props.imgSrc} />
     </div>
   )
 

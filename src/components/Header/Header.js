@@ -9,15 +9,16 @@ export default function Header (props) {
     // grab the height of the current ref
     const measuredRef = useCallback(node => {
         if(node !== null){
-            setHeight(node.getBoundingClientRect().height)
+            
+           if(height) setHeight(node.getBoundingClientRect().height)
         }
-    },[])
+    },[height])
         
     let handleScroll = () => {
         const currentScrollPos = window.pageYOffset
         const visible = 800 > currentScrollPos
         setVisible(visible)
-        setScrollPosition(currentScrollPos)
+        if(prevScrollPos) setScrollPosition(currentScrollPos)
     }
 
     // add a scroll event listener when mounted and unmounted
@@ -33,7 +34,7 @@ export default function Header (props) {
             ref={measuredRef}
             className={`header  moderate-pink ${visible ? 'header-hidden' : ''}`}
             >
-            <img src='https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2FIsael%20LIZAMa%20(4).png?alt=media' />
+            <img alt='logo of website' src='https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2FIsael%20LIZAMa%20(4).png?alt=media' />
         </nav>
     )
 }

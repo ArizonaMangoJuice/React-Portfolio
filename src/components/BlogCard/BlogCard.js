@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import {transition, Transition} from 'react-transition-group'
+import React from 'react'
+import { Transition } from 'react-transition-group'
 import './style.css'
 
-let REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
+// let REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
 let url 
 const duration = 3000
 
