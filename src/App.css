@@ -173,14 +173,19 @@ body{
   display: block;
 }
 
+footer p {
+  text-align: center;
+}
+
 @media only screen and (max-width: 600px){
   body{
     height: fit-content;
     width: fit-content;
   }
+  
   .big-container{
     box-sizing: border-box;
-    padding: 5px;
+    padding: 0 5px 5px 5px !important;
   }
 
   .big-container h1 {
@@ -300,5 +305,29 @@ body{
 
   .header {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 900px){
+  .blog-container{
+    height: fit-content !important;
+  }
+
+  .big-container h1{
+    font-size: 60px;
+  }
+
+  .p-container{
+    font-size: 28px;
+  }
+
+  .social-media {
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1023px) and (max-width: 1078px){
+  .blog-container{
+    height: fit-content !important;
   }
 }
