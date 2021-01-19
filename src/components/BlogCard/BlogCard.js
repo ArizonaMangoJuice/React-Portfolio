@@ -51,7 +51,6 @@ export default function BlogCard(props){
     }
 
     if(props.main){
-
         url = props.result[props.count].linkName
 
         url = encodeURI(`https://isaelblogs.netlify.app/blogPages/${url}`)

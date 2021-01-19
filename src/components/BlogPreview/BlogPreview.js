@@ -23,7 +23,7 @@ export default function Clock(){
     }, [fetchResult])
 
     useEffect(() => {
-        if(currentCount === 3) setCount(0)
+        if(currentCount === 2) setCount(0)
         
         const id = setInterval(() => {
             setswitched(true)
@@ -36,8 +36,7 @@ export default function Clock(){
         }
     }, [currentCount])
 
-    console.log(switched)
-    console.log(currentCount)
+    
 
     return (
 
