@@ -18,7 +18,7 @@ const transitionStyle = {
     exited: { opacity: 0},
 }
 
-
+// this is really hard to read refactor or just remove it
 
 export default function BlogCard(props){
 
