@@ -37,6 +37,7 @@ export default function Clock(){
     }, [currentCount])
 
     console.log(switched)
+    console.log(currentCount)
 
     return (
 
