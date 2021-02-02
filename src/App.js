@@ -58,7 +58,7 @@ function App(props) {
           <p>
             I Am a Full Stack Developer Living In Colorado, USA
           </p>
-          <p>I Make Web Applications with React, Python, and React Native</p>
+          <p>I Make Web Applications with React, and React Native</p>
         </div>
         <div className='social-media'>
           <a data-aos='fade-down' href='https://github.com/ArizonaMangoJuice?tab=repositories'><i className="fab fa-github"></i></a>
