@@ -26,6 +26,15 @@ export const staticData = [
         link: 'https://nvre.netlify.app/'
     },
     {
+        title:'My Kitchen And You',
+        desc:'Cook Delicious Foods',
+        paragraph:`My Kitchen and You is a web app that is still being upgraded with more features. The client has a youtube channel called Los Sabores De Mi Tierra. She hired me to make a website that lets her write her recipes and linking her youtube videos.`,
+        img:true,
+        me:false,
+        imgSrc:'https://firebasestorage.googleapis.com/v0/b/los-sabores.appspot.com/o/mykitchenandyou1.jpg?alt=media',
+        link: 'https://mykitchenandyou.com'
+    },
+    {
         title:'Bonus Kid',
         desc:'Treat Your Children',
         paragraph:`Bonus Kid  is an app that lets parents give incentives to their kids. The parent can add tasks and rewards to each child they have. The child can send a response saying they have completed the task or buy a reward from the store the parent has made. This app uses React, MongoDB, Express, and mocha, chai, enzyme and, jest. You can find the repo here.`,
