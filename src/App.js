@@ -16,7 +16,7 @@ const mapStateToProps = state => ({
 function App(props) {
   let animations = ['fade-in', 'fade-up', 'fade-right', 'fade-down']
 
-  let background = ['lime-green', 'very-soft-orange', 'soft-orange','moderate-pink']
+  let background = ['lime-green', 'very-soft-orange', 'soft-orange','moderate-pink', 'lime-green']
 
   // console.log(staticData)
 
