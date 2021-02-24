@@ -60,6 +60,11 @@ function App(props) {
           </p>
           <p>I Make Web Applications with React and React Native</p>
         </div>
+        {/* <div className='about-me'>
+          <div className="hexagon"><span><i className="big fas fa-shield-virus"></i></span></div>
+          <div className="hexagon"><span><i className="fas fa-laptop-code"></i></span></div>
+          <div className="hexagon"><span><i class="fas fa-bolt"></i></span></div>
+        </div> */}
         <div className='social-media'>
           <a data-aos='fade-down' href='https://github.com/ArizonaMangoJuice?tab=repositories'><i className="fab fa-github"></i></a>
           <a data-aos='fade-down' href='https://www.linkedin.com/in/isael-lizama-9a128b130/'><i className="fab fa-linkedin-in"></i></a>
