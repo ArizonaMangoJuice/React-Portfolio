@@ -66,7 +66,7 @@ function App(props) {
           <a data-aos='fade-down' href='https://isaelblogs.netlify.app/'><i className="fas fa-blog"></i></a>
         </div>
 
-        {/* <div className='about-me'>
+        <div className='about-me'>
           <div className='about-card-skill'>
             <div className="hexagon"><span><i className="big fas fa-shield-virus"></i></span></div>
             <p className='card-skill-title'>Reliable</p>
@@ -82,7 +82,7 @@ function App(props) {
             <p className='card-skill-title'>Dynamic</p>
             <p className='card-skill-desc'>I love making old sites feel modern.</p>
           </div>
-        </div> */}
+        </div>
       </div>
       <BlogPreview />
       {blockInfo}
