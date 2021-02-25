@@ -150,18 +150,40 @@ body{
 .about-me{
   display: flex;
   flex-direction: row;
+  /* justify-content: center; */
+  width: 100vw;
+  margin-top: 12vh;
+  height: 360px;
 }
 
 .big{
   font-size: 6vh;
 }
 
+.about-card-skill{
+  width: 200px;
+  margin: 2vh;
+
+}
+
+.card-skill-title{
+  font-size: 2vh;
+  margin-top: 5.5vh;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-skill-desc{
+  margin-top: 1vh;
+  font-size: 1vh;
+  text-align: center;
+}
 /* hexagons */
 .hexagon {
   position: relative;
   width: 200px; 
   height: 115.47px;
-  background-color: #64C7CC;
+  background-color: #abc0b8;
   margin: 57.74px 0;
   box-shadow: 0 0 20px rgba(75,63,63,0.4);
 }
