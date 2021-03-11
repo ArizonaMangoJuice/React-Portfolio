@@ -66,7 +66,24 @@ function App(props) {
           <a data-aos='fade-down' href='https://www.linkedin.com/in/isael-lizama-9a128b130/'><i className="fab fa-linkedin-in"></i></a>
           <a data-aos='fade-down' href='https://isaelblogs.netlify.app/'><i className="fas fa-blog"></i></a>
         </div>
-        
+
+        {/* <div className='about-me'>
+          <div className='about-card-skill'>
+            <div className="hexagon"><span><i className="big fas fa-shield-virus"></i></span></div>
+            <p className='card-skill-title'>Reliable</p>
+            <p className='card-skill-desc'>I try to make applications that are reliable and robust.</p>
+          </div>
+          <div className='about-card-skill'>
+            <div className="hexagon"><span><i className="fas fa-laptop-code"></i></span></div>
+            <p className='card-skill-title'>Reliable</p>
+            <p className='card-skill-desc'>I try to make applications that are reliable and robust.</p>
+          </div>
+          <div className='about-card-skill'>
+            <div className="hexagon"><span><i class="fas fa-bolt"></i></span></div>
+            <p className='card-skill-title'>Dynamic</p>
+            <p className='card-skill-desc'>I love making old sites feel modern.</p>
+          </div>
+        </div> */}
       </div>
       <BlogPreview />
       <SmallProjects />
