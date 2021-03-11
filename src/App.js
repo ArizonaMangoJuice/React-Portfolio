@@ -8,6 +8,7 @@ import Aos from "aos"
 import {staticData} from './Static'
 import Footer from './components/Footer/Footer';
 import BlogPreview from './components/BlogPreview/BlogPreview';
+import SmallProjects from './components/SmallProjects';
 
 const mapStateToProps = state => ({
   divY: state.landingPage.divY
@@ -68,6 +69,7 @@ function App(props) {
         
       </div>
       <BlogPreview />
+      <SmallProjects />
       {blockInfo}
       <Footer />
     </div>
