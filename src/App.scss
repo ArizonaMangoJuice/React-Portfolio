@@ -103,8 +103,9 @@ $transition: .2s;
 
 .blog-container{
     .blog{
+        transition: $transition;
         position: relative;
-        box-shadow: 0px 0px 15px 5px $normalBlackAlpha !important;
+        box-shadow: 0px 0px 15px 5px $normalBlackAlpha;
         height: 350px;
         max-width: 500px;
         width: 500px;
@@ -113,6 +114,17 @@ $transition: .2s;
         border-radius: 5px;
         background-color: $ruber;
         color: white;
+
+        &:hover{
+            box-shadow: -5px 10px 20px 1px #ce4a70;
+            transition: $transition;    
+        }
+
+        &:focus{
+            outline: none;
+            box-shadow: -5px 10px 20px 1px #ce4a70;
+            transition: $transition;    
+        }
     }
 }
 
@@ -136,6 +148,13 @@ $transition: .2s;
     transition: $transition;
 
     &:hover{
+        box-shadow: -5px 10px 20px 1px $ruber;
+        transition: $transition;
+        transform: scale(1.05);
+    }
+
+    &:focus{
+        outline: none;
         box-shadow: -5px 10px 20px 1px $ruber;
         transition: $transition;
         transform: scale(1.05);
@@ -184,6 +203,14 @@ $transition: .2s;
     }
 
     a:hover{
+        transition: $transition;
+        background-color: $cultured;
+        color: $ruber;
+        border: 1px solid $ruber;
+    }
+
+    a:focus{
+        outline: none;
         transition: $transition;
         background-color: $cultured;
         color: $ruber;

@@ -29,7 +29,7 @@ const BlockInfo = React.forwardRef((props, ref) => {
   )
 
   return (
-        <div className='block-info ' ref={props.forwardRef}>
+        <div tabIndex='0' className='block-info ' ref={props.forwardRef}>
             <div className='theme-bar'></div>
             <section>
               <h4 data-aos='flip-up' className='small-padding-top-bottom ruber'>{props.title}</h4>
