@@ -5,12 +5,12 @@ const SmallProjects = () => {
     const projects = staticSmallProjects.map(e => (
         <a  
                         href={e.link}
-                        className={`blog relative `}
+                        className={`blog relative`}
                         style={{backgroundImage: `url(${e.img})`, backgroundPosition:'center', backgroundSize: 'cover'}}
 
                     >
                         <div className='text dark-blue-background'>
-                            <h1>{e.title}</h1>
+                            <h1 className='projects-card-name'>{e.title}</h1>
                             {/* <h3>{props.result[props.count].desc}</h3> */}
                         </div>        
                     </a>

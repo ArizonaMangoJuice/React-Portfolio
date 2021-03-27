@@ -1,11 +1,11 @@
-import React, { useEffect  } from 'react';
-import './App.css';
+import React, { useEffect } from 'react';
+import './App.scss';
 import Header from './components/Header/Header';
 import BlockInfo from './components/BlockInfo/BlockInfo';
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import 'aos/dist/aos.css'
 import Aos from "aos"
-import {staticData} from './Static'
+import { staticData } from './Static'
 import Footer from './components/Footer/Footer';
 import BlogPreview from './components/BlogPreview/BlogPreview';
 import SmallProjects from './components/SmallProjects';
@@ -17,24 +17,24 @@ const mapStateToProps = state => ({
 function App(props) {
   let animations = ['fade-in', 'fade-up', 'fade-right', 'fade-down']
 
-  let background = ['lime-green', 'very-soft-orange', 'soft-orange','moderate-pink', 'lime-green']
+  let background = ['lime-green', 'very-soft-orange', 'soft-orange', 'moderate-pink', 'lime-green']
 
   // console.log(staticData)
 
   useEffect(() => {
     // window.addEventListener('scroll', handleScroll)
-    Aos.init({duration: 600})
+    Aos.init({ duration: 600 })
     return () => {
       // window.removeEventListener('scroll', handleScroll)
     }
   })
 
-  let blockInfo = staticData.map((e,i) => (
+  let blockInfo = staticData.map((e, i) => (
     <div className={`${background[i]}`}>
       <div data-aos={animations[i]} className={`block-container ${background[i]}`}>
         <BlockInfo
-          img={e.img} 
-          me={e.me} 
+          img={e.img}
+          me={e.me}
           imgSrc={e.imgSrc}
           title={e.title}
           desc={e.desc}
@@ -48,23 +48,25 @@ function App(props) {
 
   // console.log(blockInfo)
 
- 
+
 
   return (
     <div className="App">
       <Header />
-      <div className='big-container'>
-        <h1 data-aos='fade-left'>Looking For a Full Stack Developer?</h1>
-        <div data-aos='fade-right' className='p-container'>
-          <p>
-            I Am a Full Stack Developer Living In Colorado, USA
+      <div className='big-container '>
+        <div className='jumbotron-container'>
+          <h1 data-aos='fade-left'>Looking For a Full Stack <br/> Developer?</h1>
+          <div data-aos='fade-right' className='p-container'>
+            <p>
+              I Am a Full Stack Developer Living In <span>Denver Colorado</span>, USA
           </p>
-          <p>I Make Web Applications with React and React Native</p>
-        </div>
-        <div className='social-media'>
-          <a data-aos='fade-down' href='https://github.com/ArizonaMangoJuice?tab=repositories'><i className="fab fa-github"></i></a>
-          <a data-aos='fade-down' href='https://www.linkedin.com/in/isael-lizama-9a128b130/'><i className="fab fa-linkedin-in"></i></a>
-          <a data-aos='fade-down' href='https://isaelblogs.netlify.app/'><i className="fas fa-blog"></i></a>
+            <p>I Make Web Applications with <span>React</span> and <span>React Native</span></p>
+          </div>
+          <div className='social-media'>
+            <a data-aos='fade-down' href='https://github.com/ArizonaMangoJuice?tab=repositories'><i className="jumbo-icons fab fa-github"></i></a>
+            <a data-aos='fade-down' href='https://www.linkedin.com/in/isael-lizama-9a128b130/'><i className="jumbo-icons fab fa-linkedin-in"></i></a>
+            <a data-aos='fade-down' href='https://isaelblogs.netlify.app/'><i className="jumbo-icons fas fa-blog"></i></a>
+          </div>
         </div>
 
         {/* <div className='about-me'>
@@ -84,10 +86,10 @@ function App(props) {
             <p className='card-skill-desc'>I love making old sites feel modern.</p>
           </div>
         </div> */}
+        <BlogPreview />
+        <SmallProjects />
+        {blockInfo}
       </div>
-      <BlogPreview />
-      <SmallProjects />
-      {blockInfo}
       <Footer />
     </div>
   );
