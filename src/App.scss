@@ -2,6 +2,8 @@ $ruber: #ce4a70;
 $cultured: #F0F0F0;
 $normalBlack: rgb(48, 48, 48);
 $normalBlackAlpha: rgba(48, 48, 48, 0.2);
+$budGreen: #7FB069;
+$fullCircle: 50%;
 $border: 1px solid red;
 $transition: .2s;
 // https://coolors.co/ce4a70-f0f0f0-7fb069
@@ -14,12 +16,51 @@ $transition: .2s;
 }
 
 .App{
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $cultured;
+    overflow: hidden;
+    position: relative;
 }
+
+$circles: "";
+
+@for $i from 1 through 400{
+    $circles: $circles + random(1000) * .25vh + " " + random(1000) * 1.5vw + " " + 0 + " " + random(30) * -0.01rem + $budGreen ;
+    @if $i < 400{
+        $circles: $circles + ",";
+    }
+}
+
+.App{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $cultured;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.decoration-circle-container{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 2rem;
+    height: 2rem;
+    box-shadow: #{$circles + " inset"};
+    z-index: 0;
+}
+
+.decoration-circle{
+    border-radius: $fullCircle;
+    opacity: .7;
+    position: absolute;
+    overflow: hidden;
+    // top:-100vh;
+}
+
 
 .jumbotron-container{
     width: 100%;
@@ -244,6 +285,7 @@ footer{
     width: 100%;
     background-color: $ruber;
     font-size: calc(11px + 5 * ((100vw - 320px) / 680)) ;
+    z-index: 1;
 }
 
 
@@ -291,3 +333,4 @@ footer{
     }
 
 }
+
