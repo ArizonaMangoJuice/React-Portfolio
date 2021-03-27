@@ -1,6 +1,7 @@
 $ruber: #ce4a70;
 $cultured: #F0F0F0;
-$normalBlack: rgb(48, 48, 48);
+$culturedAlpha: rgba(240,240,240,.6);
+$normalBlack: #303030;
 $normalBlackAlpha: rgba(48, 48, 48, 0.2);
 $budGreen: #7FB069;
 $fullCircle: 50%;
@@ -15,50 +16,53 @@ $transition: .2s;
     color: $ruber;
 }
 
-.App{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $cultured;
-    overflow: hidden;
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    height: fit-content;
+    min-width: 100vw;
+    width: 100vw;
     position: relative;
-}
+    background: $culturedAlpha;
+    // backdrop-filter: blur(20px);
+  }
 
+
+  
 $circles: "";
+$width: 100vw;
 
-@for $i from 1 through 400{
-    $circles: $circles + random(1000) * .25vh + " " + random(1000) * 1.5vw + " " + 0 + " " + random(30) * -0.01rem + $budGreen ;
-    @if $i < 400{
+@for $i from 1 through 250{
+    $circles: $circles + random(100) + "vw"  + " " + random(1000) + "vh" + " " + 0 + " " + random() + "vh"  + " " + $budGreen ;
+    @if $i < 250{
         $circles: $circles + ",";
     }
 }
 
+.circle{
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    opacity: 0.6;
+    box-shadow: #{$circles};
+    z-index: -1;
+  }
+
 .App{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $cultured;
+    // background-color: $cultured;
     overflow: hidden;
     position: relative;
-
-}
-
-.decoration-circle-container{
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 2rem;
-    height: 2rem;
-    box-shadow: #{$circles + " inset"};
-    z-index: 0;
-}
-
-.decoration-circle{
-    border-radius: $fullCircle;
-    opacity: .7;
-    position: absolute;
-    overflow: hidden;
-    // top:-100vh;
 }
 
 

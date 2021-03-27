@@ -52,7 +52,7 @@ function App(props) {
 
   return (
     <div className="App">
-      <div className='decoration-circle-container decoration-circle'></div>
+      <div className='circle'></div>
       <Header />
       <div className='big-container '>
         <div className='jumbotron-container'>
