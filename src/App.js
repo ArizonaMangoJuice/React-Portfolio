@@ -51,8 +51,10 @@ function App(props) {
 
 
   return (
+    <>
+    <div className='circle'></div>
     <div className="App">
-      <div className='circle'></div>
+      
       <Header />
       <div className='big-container '>
         <div className='jumbotron-container'>
@@ -93,6 +95,7 @@ function App(props) {
       </div>
       <Footer />
     </div>
+    </>
   );
 }
 
