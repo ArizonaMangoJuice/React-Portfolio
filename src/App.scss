@@ -38,7 +38,7 @@ $circles: "";
 $width: 100vw;
 
 @for $i from 1 through 250{
-    $circles: $circles + random(100) + "vw"  + " " + random(1000) + "vh" + " " + 0 + " " + random() + "vh"  + " " + $budGreen ;
+    $circles: $circles + random(100) + "vw"  + " " + random(1000) + "vh" + " " + 0 + " " + random() + "vh"  + " " + $ruber ;
     @if $i < 250{
         $circles: $circles + ",";
     }
@@ -54,6 +54,17 @@ $width: 100vw;
     // opacity: 0.6;
     box-shadow: #{$circles};
     z-index: -1;
+    animation: move 2s ease 1s infinite alternate;
+  }
+
+  @keyframes move {
+      0%{
+          transform: translateY(15px);
+      }
+
+      100%{
+          transform: translateY(0px);
+      }
   }
 
 .App{
