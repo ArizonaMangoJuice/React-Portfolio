@@ -51,7 +51,7 @@ $width: 100vw;
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    // opacity: 0.6;
+    opacity: 0.6;
     box-shadow: #{$circles};
     z-index: -1;
     animation: move 2s ease 1s infinite alternate;
@@ -72,7 +72,7 @@ $width: 100vw;
     flex-direction: column;
     align-items: center;
     background-color: $culturedAlpha;
-    backdrop-filter: blur(.2vh);
+    backdrop-filter: blur(.05vh);
     overflow: hidden;
     position: relative;
 }
