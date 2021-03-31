@@ -80,8 +80,9 @@ $width: 100vw;
 
 .jumbotron-container{
     width: 100%;
-    // border: $border;   
-    height: 70vh;
+    // border: $border;  
+    min-height: 70vh; 
+    height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
