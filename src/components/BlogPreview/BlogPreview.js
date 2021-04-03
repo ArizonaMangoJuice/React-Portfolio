@@ -40,7 +40,7 @@ export default function Clock(){
     return (
 
         <div className='moderate-pink'>
-            <h1 data-aos='fade-right' className='blog-title projects-card-name'>Read My Latest Posts!</h1>
+            <h1 data-aos='fade-right' className='blog-title'>Read My Latest Posts!</h1>
              <div  className='blog-container moderate-pink'>
                      
                 <BlogCard 
