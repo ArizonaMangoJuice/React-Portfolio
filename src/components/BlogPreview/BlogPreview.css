@@ -52,6 +52,7 @@
 
 .text{
     position: absolute;
+    background-color: #b94264;
     bottom: 0;
     width: 100%;
     padding: 15px;

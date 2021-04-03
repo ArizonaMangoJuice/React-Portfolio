@@ -30,7 +30,7 @@ function App(props) {
   })
 
   let blockInfo = staticData.map((e, i) => (
-    <div className={`${background[i]}`}>
+    <div key={`e.title ${i}`} className={`${background[i]}`}>
       <div data-aos={animations[i]} className={`block-container ${background[i]}`}>
         <BlockInfo
           img={e.img}
@@ -51,7 +51,7 @@ function App(props) {
 
 
   return (
-    <>
+    <main>
     <div className='circle'></div>
     <div className="App">
       
@@ -66,9 +66,9 @@ function App(props) {
             <p>I Make Web Applications with <span>React</span> and <span>React Native</span></p>
           </div>
           <div className='social-media'>
-            <a data-aos='fade-down' href='https://github.com/ArizonaMangoJuice?tab=repositories'><i className="jumbo-icons fab fa-github"></i></a>
-            <a data-aos='fade-down' href='https://www.linkedin.com/in/isael-lizama-9a128b130/'><i className="jumbo-icons fab fa-linkedin-in"></i></a>
-            <a data-aos='fade-down' href='https://isaelblogs.netlify.app/'><i className="jumbo-icons fas fa-blog"></i></a>
+            <a aria-label='My Github Link' data-aos='fade-down' href='https://github.com/ArizonaMangoJuice?tab=repositories'><i className="jumbo-icons fab fa-github"></i></a>
+            <a aria-label='My LinkedIn Link' data-aos='fade-down' href='https://www.linkedin.com/in/isael-lizama-9a128b130/'><i className="jumbo-icons fab fa-linkedin-in"></i></a>
+            <a aria-label='My Blogs' data-aos='fade-down' href='https://isaelblogs.netlify.app/'><i className="jumbo-icons fas fa-blog"></i></a>
           </div>
         </div>
 
@@ -95,7 +95,7 @@ function App(props) {
       </div>
       <Footer />
     </div>
-    </>
+    </main>
   );
 }
 

@@ -6,7 +6,6 @@ import BlogCard from '../BlogCard/BlogCard'
 
 let REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
 
-console.log(REACT_APP_SERVER_URL)
 export default function Clock(){
     const [currentCount, setCount] = useState(0)
     const [fetchResult, setFetchResult] = useState('')

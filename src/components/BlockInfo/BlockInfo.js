@@ -24,7 +24,7 @@ const BlockInfo = React.forwardRef((props, ref) => {
 
   if(props.img && !props.me) image = (
     <div data-aos='fade-down' className='block-image-container'>
-      <img alt='main topic' class='topic' src={props.imgSrc} />
+      <img alt='main topic' className='topic' src={props.imgSrc} />
     </div>
   )
 
@@ -32,10 +32,10 @@ const BlockInfo = React.forwardRef((props, ref) => {
         <div tabIndex='0' className='block-info ' ref={props.forwardRef}>
             <div className='theme-bar'></div>
             <section>
-              <h4 data-aos='flip-up' className='small-padding-top-bottom ruber'>{props.title}</h4>
-              <h2 data-aos='fade-right'className='small-padding-top-bottom'>{props.desc}</h2>
+              <h2 data-aos='flip-up' className='small-padding-top-bottom ruber'>{props.title}</h2>
+              <p data-aos='fade-right'className='small-padding-top-bottom'>{props.desc}</p>
               <p data-aos='fade-down' className='small-padding-top-bottom'>{props.paragraph}</p>
-              <a href={props.link ? props.link : '#'} data-aos='zoom-out-down' className='block-info-button'>{props.buttonTitle ? props.buttonTitle : 'View Project'}</a>
+              <a href={props.link ? props.link : '#'} data-aos='zoom-out-down' className='block-info-button'>View {props.title ? props.title : 'View Project'}</a>
             </section>
             {image ? image : <h1 data-aos='fade-down' className='big-quote'>
                Just Do It

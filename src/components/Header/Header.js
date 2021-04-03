@@ -30,11 +30,11 @@ export default function Header (props) {
     })
     
     return (
-        <nav 
+        <header 
             ref={measuredRef}
             className={`header  moderate-pink ${visible ? 'header-hidden' : ''}`}
             >
             <img alt='logo of website' src='https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2FIsael%20LIZAMa%20(4).png?alt=media' />
-        </nav>
+        </header>
     )
 }

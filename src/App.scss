@@ -8,6 +8,12 @@ $fullCircle: 50%;
 $border: 1px solid red;
 $transition: .2s;
 // https://coolors.co/ce4a70-f0f0f0-7fb069
+
+main{
+    margin: 0;
+    padding: 0;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -107,7 +113,7 @@ $width: 100vw;
     height: fit-content;
     // border: $border;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     // this should be moved to its own 
     a {
         display: block;
