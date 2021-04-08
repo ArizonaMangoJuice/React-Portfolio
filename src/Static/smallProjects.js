@@ -13,6 +13,10 @@ export const staticSmallProjects = [
         title: 'lol Improver WIP',
         img: 'https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2Flolimprover%20Construction.jpg?alt=media',
         link: 'https://zealous-babbage-0a29dc.netlify.app',
+    },
+    {
+        title: 'Cleaning Service',
+        img: 'https://firebasestorage.googleapis.com/v0/b/isael-blogs.appspot.com/o/images%2FcleaningService482021.jpg?alt=media',
+        link: 'https://quizzical-colden-394d42.netlify.app'
     }
-    
 ]

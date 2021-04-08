@@ -2,7 +2,6 @@ import React from 'react'
 import { Transition } from 'react-transition-group'
 import './style.css'
 
-// let REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
 let url 
 const duration = 3000
 
@@ -18,7 +17,7 @@ const transitionStyle = {
     exited: { opacity: 0},
 }
 
-// this is really hard to read refactor or just remove it
+// this is really hard to read. refactor or just remove it
 
 export default function BlogCard(props){
 
